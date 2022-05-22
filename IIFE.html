@@ -1,0 +1,33 @@
+<html>
+  <body>
+    <h2>IIFE</h2>
+    
+
+    <p>
+    IIFE stands for Immediately Invoked Function Expression.
+    It is an annonymous function which gets immediately invoked.
+    Itis mainly used to avoid naming Collisions.
+
+    </p>
+
+    <p>
+      <b><u>Sample Code:</u></b>
+    </p>
+
+    <p><pre>(function(){
+        var x = 10
+        document.getElementById("demo").innerHTML =
+          "<b>Output : </b>: " + x;
+     })();</pre></p>
+
+    <p id="demo"></p>
+
+    <script>
+         (function(){
+            var x = 10
+            document.getElementById("demo").innerHTML =
+              "<b>Output : </b> " + x;
+         })();
+    </script>
+  </body>
+</html>
