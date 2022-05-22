@@ -1,0 +1,81 @@
+<html>
+  <body>
+    <h2>Closure Function</h2>
+
+    <p>
+      Closures are functions inside a function and it makes a normal function
+      stateful. It is used to create a self-contained state to avoid global
+      variables.
+    </p>
+
+    <p>
+      <b><u>Sample Code:</u></b>
+    </p>
+
+    <p><pre>
+        function closureFunction() {
+          var x = 0;
+
+          function Increment() {
+            document.getElementById("demo").innerHTML =
+              "<b>Output : </b>counter: " + ++x;
+          }
+
+          function getXvalue() {
+            return x;
+          }
+
+          function init() {
+            return (x = 0);
+          }
+
+          return {
+            Increment,
+            getXvalue,
+            init,
+          };
+        }
+
+        var ref = closureFunction();
+        ref.Increment();
+        ref.Increment();
+        ref.Increment();
+        ref.getXvalue();
+        ref.init();
+    </pre>  </p>
+
+    <p id="demo"></p>
+
+    <script>
+      function closureFunction() {
+        var x = 0;
+
+        function Increment() {
+          document.getElementById("demo").innerHTML =
+            "<b>Output : </b>counter: " + ++x;
+        }
+
+        function getXvalue() {
+          return x;
+        }
+
+        function init() {
+          return (x = 0);
+        }
+
+        return {
+          Increment,
+          getXvalue,
+          init,
+        };
+      }
+
+      var ref = closureFunction();
+      ref.Increment();
+      ref.Increment();
+      ref.Increment();
+      ref.getXvalue();
+      ref.init();
+    </script>
+  </body>
+</html>
